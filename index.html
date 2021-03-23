@@ -19,7 +19,11 @@
   <script
   src="https://code.jquery.com/jquery-3.6.0.js"
   integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-  crossorigin="anonymous"></script>
+  crossorigin="anonymous">
+    
+
+
+  </script>
   <style>
 body {font-family: Arial, Helvetica, sans-serif;}
 
@@ -161,7 +165,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
         <h6 class="mb-3"> Beauty Sleep Bedtime Bliss Lotion corporelle
           avis</h6>
         <p>
-          <button class="btn btn-outline-dark button" data-modal="#m6" >Buy Bow</button>
+          <button class="btn btn-outline-dark button" id="b1"  >Buy Bow</button>
         </p>
       </div>
     </div>
@@ -240,9 +244,15 @@ body {font-family: Arial, Helvetica, sans-serif;}
 <script src="js/custom.js"></script>
 <script>
 $(".button").on("click", function() {
+  $.getJSON("myfile.json", function(return_data){
+    alert('>>>');
+                $.each(return_data, function(key, value){
+                //$("#d1").append(key + " => " + value + "<br>");
+            });
+                });
   var modal = $(this).data("modal");
   //alert(modal);
-  $(modal).show();
+  //$(modal).show();
 });
 
 $(".modal").on("click", function(e) {
@@ -252,6 +262,20 @@ $(".modal").on("click", function(e) {
   }
 });
 
+
+$(document).ready(function(){
+    
+  
+  $("#b1").on("click", function() {
+    alert('>>>');
+    $.getJSON("myfile.json", function(return_data){
+                $.each(return_data, function(key, value){
+                //$("#d1").append(key + " => " + value + "<br>");
+            });
+        });
+    });
+
+}); 
 
 </script>
 
