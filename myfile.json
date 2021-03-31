@@ -214,7 +214,7 @@
 					}]
 				}]
 			}]
-		},"items2": [{
+		},"items2": {
 			"9c92e921eabf27aa0c8b0c5a9c1657bb": [{
 				"product": [{
 					"show_country_price_status": "1",
@@ -428,6 +428,6 @@
 					}]
 				}]
 			}]
-		}]
+		}
 	
 }
